@@ -1,0 +1,53 @@
+.search {
+  height: 100vh;
+  background-image: linear-gradient(#0000007e, #0000007e), url(/background_banner.jpg);
+  padding: 20px 8%;
+  text-align: center;
+}
+
+.search form {
+  margin-bottom: 30px;
+}
+
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+input {
+  width: 50%;
+  height: 50px;
+  background: #333;
+  color: white;
+  margin: 12px 0;
+  border: 0;
+  outline: 0;
+  border-radius: 4px;
+  padding: 16px 20px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+input::placeholder {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+button {
+  width: 50%;
+  border: 0;
+  outline: 0;
+  padding: 16px;
+  border-radius: 4px;
+  background: #e50914;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 20px;
+  cursor: pointer;
+}
+button:hover{
+    background: #b20710;
+}
