@@ -80,6 +80,80 @@
     background: #141414;
 }
 
+/* ==== Drawer Menu Styles ==== */
+.menu-icon {
+  width: 50px;
+  cursor: pointer;
+  display: none;
+  filter: brightness(0) invert(1); 
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  left: -260px;
+  width: 240px;
+  height: 100%;
+  background-color: #141414;
+  color: #fff;
+  padding: 20px;
+  transition: left 0.3s ease;
+  z-index: 2000;
+}
+
+.drawer.open {
+  left: 0;
+}
+
+.drawer-header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.close-icon {
+  width: 50px;
+  cursor: pointer;
+  filter: brightness(0) invert(1); 
+}
+
+.drawer-menu {
+  list-style: none;
+  padding: 0;
+}
+
+.drawer-menu li {
+  padding: 12px 0;
+  border-bottom: 1px solid #333;
+  cursor: pointer;
+}
+
+.drawer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1500;
+  display: none;
+}
+
+.drawer-overlay.show {
+  display: block;
+}
+
+/* Show hamburger only on small screens */
+@media (max-width: 800px) {
+  .nav-links {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
+
 
 @media (max-width: 800px) {
     .navbar {
