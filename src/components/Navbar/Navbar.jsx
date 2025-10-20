@@ -83,7 +83,11 @@ const Navbar = () => {
           <img src={close_icon} alt="close" className="close-icon" onClick={closeDrawer} />
         </div>
         <ul className="drawer-menu">
-          <li onClick={() => { navigate("/"); closeDrawer(); }}>Home</li>
+          <li onClick={() => {
+            navigate("/");
+            window.scrollTo({ top: 0, behavior: "smooth" }); 
+            closeDrawer();
+          }}>Home</li>
           <li onClick={() => { navigate("/tv-shows"); closeDrawer(); }}>TV Shows</li>
           <li onClick={closeDrawer}>Movies</li>
           <li onClick={closeDrawer}>New & Popular</li>

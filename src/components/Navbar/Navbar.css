@@ -22,11 +22,15 @@
 
 .navbar-left ul {
     display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    white-space: nowrap;
     list-style: none;
     gap: 20px;
 }
 
 .navbar-left ul li {
+    flex: 0 0 auto;
     cursor: pointer;
 }
 
