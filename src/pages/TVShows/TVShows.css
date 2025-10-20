@@ -59,3 +59,39 @@
 .loading-spinner img {
     width: 60px;
 }
+
+@media (max-width: 1024px) {
+    .tv-shows {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+    }
+}
+
+@media (max-width: 800px) {
+    .tv-shows {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .back-arrow {
+        width: 40px;
+        top: 15px;
+        left: 15px;
+    }
+
+    .tvShow-card p {
+        font-size: 13px;
+        padding: 6px;
+    }
+}
+
+@media (max-width: 600px) {
+    .tv-shows {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .tvShow-card p {
+        font-size: 12px;
+    }
+}
