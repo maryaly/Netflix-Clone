@@ -2,11 +2,16 @@ import React from 'react';
 import './MovieCard.css'
 import { Link, useNavigate } from 'react-router-dom';
 import { IMAGE_URL2 } from '../../utils/Constances/Constance';
-import Button from '@mui/material/Button';
+
+const PLACEHOLDER_IMAGE = 'https://via.placeholder.com/200x270?text=No+Image';
 
 const MovieCard = ({ movie }) => {
 
   const navigate = useNavigate();
+
+   // Determine which image to show
+  const posterSrc = movie.poster_path ? `${IMAGE_URL2}${movie.poster_path}` : PLACEHOLDER_IMAGE;
+
 
   return (
     <div className="movie-card" onClick={() => {
@@ -17,10 +22,14 @@ const MovieCard = ({ movie }) => {
       }
     }}>
       <img
-        src={`${IMAGE_URL2}${movie.poster_path}`}
-        alt={movie.title}
+        src={posterSrc}
+        alt={movie.title || 'Movie Poster'}
+        onError={(e) => {
+          e.target.onerror = null; // Prevent infinite loop
+          e.target.src = PLACEHOLDER_IMAGE; // Fallback image
+        }}
       />
-      <h3>{movie.title}</h3>
+      <p>{movie.original_title}</p>
       <p>⭐ {movie.vote_average}</p>
     </div>
   );

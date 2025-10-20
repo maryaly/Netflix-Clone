@@ -16,21 +16,24 @@ const Search = () => {
   return (
     <div className="search">
       <form onSubmit={handleSearch}>
-        <input 
-          type="text" 
-          value={query} 
-          onChange={(e) => setQuery(e.target.value)} 
+        <input
+          type="text"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
           placeholder="Search movies..."
         />
         <button type="submit">Search</button>
       </form>
 
-      <div className="movies-grid">
-        {movies.map(movie => (
-          <MovieCard key={movie.id} movie={movie} />
-        ))}
+      <div className="movies-container">
+        <div className="movies-grid">
+          {movies.map(movie => (
+            <MovieCard key={movie.id} movie={movie} />
+          ))}
+        </div>
       </div>
     </div>
+
   );
 };
 
