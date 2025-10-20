@@ -38,6 +38,7 @@
 }
 
 .hero-btns .btn {
+    width: 200px;
     border: 0;
     outline: 0;
     padding: 8px 20px;
@@ -49,6 +50,7 @@
     background: white;
     border-radius: 4px;
     cursor: pointer;
+    color: black;
 }
 
 .hero-btns .btn.dark-btn {
@@ -122,6 +124,7 @@
     }
 
     .hero-btns .btn {
+        width: 100px;
         padding: 4px 10px;
         gap: 5px;
         font-size: 10px;
