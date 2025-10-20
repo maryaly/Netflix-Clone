@@ -54,6 +54,12 @@
         top: 15px;
         left: 15px;
     }
+
+     .back-arrow {
+        width: 40px;
+        top: 15px;
+        left: 15px;
+    }
 }
 
 @media (max-width: 600px) {
