@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import './Search.css'
+import React, { useContext } from 'react';
+import './Search.css';
 import { fetchMovies } from '../../api/tmdb.js';
 import MovieCard from '../../components/MovieCard/MovieCard.jsx';
+import { SearchContext } from '../../utils/Context/SearchContext.jsx';
 
 const Search = () => {
-  const [query, setQuery] = useState('');
-  const [movies, setMovies] = useState([]);
+  const { query, setQuery, movies, setMovies } = useContext(SearchContext);
 
   const handleSearch = async (e) => {
     e.preventDefault();
@@ -27,7 +27,7 @@ const Search = () => {
 
       <div className="movies-container">
         <div className="movies-grid">
-          {movies.map(movie => (
+          {movies.map((movie) => (
             <MovieCard key={movie.id} movie={movie} />
           ))}
         </div>
@@ -37,4 +37,4 @@ const Search = () => {
   );
 };
 
-export default Search
+export default Search;
